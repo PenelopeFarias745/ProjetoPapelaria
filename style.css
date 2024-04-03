@@ -1,0 +1,44 @@
+body
+{
+    background-color:rgb(234, 202, 162);
+    font-family: "Open Sans", sans-serif;
+}
+
+.heading
+{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-image: url(background.jpg);
+}
+
+.title img
+{
+    margin-top: 35px;
+    font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+button
+{
+    background-color: rgb(192, 231, 240);
+    border-color: rgb(192, 231, 240);
+    border-radius: 20px;
+    color: rgb(44, 42, 42);
+    font-weight: 1000;
+}
+
+ul
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li
+{
+    color: rgb(27, 27, 67);
+}

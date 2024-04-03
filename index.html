@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Papelaria</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<center>
+    <div class="heading" style="width: 65%; height: 30%;">
+      <img src="camera.png" style="height: 6%; width: 6%;">
+      <h1>ㅤ</h1>
+      <h1 class="title">Identificador de Imagens</h1>  
+    </div>
+</center>
+<br>
+<br>
+<center>
+    <div class="container">
+        <h3>A papelaria está comprando artigos para serem vendidos na loja. Os seguintes objetos estão sendo aceitos:</h3>
+        <ul>
+            <li><a href="https://www.google.com/search?q=caderno&rlz=1C1VDKB_pt-PTBR1080BR1080&oq=tesoura&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDEwODVqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8">Caderno</a></li>
+            <li><a href="https://www.google.com/search?q=caneta&rlz=1C1VDKB_pt-PTBR1080BR1080&oq=tesoura&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDEwODVqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8">Caneta</a></li>
+            <li><a href="https://www.google.com/search?q=livro&rlz=1C1VDKB_pt-PTBR1080BR1080&oq=tesoura&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDEwODVqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8">Livro</a></li>
+            <li><a href="https://www.google.com/search?q=tesoura&rlz=1C1VDKB_pt-PTBR1080BR1080&oq=tesoura&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDEwODVqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8">Tesoura</a></li>
+            <li><a href="https://www.google.com/search?q=estilete&rlz=1C1VDKB_pt-PTBR1080BR1080&oq=tesoura&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDEwODVqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8">Estilete</a></li>
+        </ul>
+        <h4>Visualização da Webcam:</h4>
+        <h6 style="color: rgb(220, 130, 130)">*Por favor, mostre para a câmera o seu objeto para verificar se ele será identificado ou não.</h6>
+        <div id="camera"></div>
+        <div id="divVerificar"></div>
+        <button id="btnFoto" onclick="tirarFoto()"> CAPTURAR</button>
+        <button id="btnVerificar" onclick="verificar()">VERIFICAR</button>
+        <br><br>
+        <div>
+            <p>Objeto: <b><span id="objeto"></span></b></p>
+            <p>Precisão: <b><span id="precisao"></b></span></p>
+        </div>
+    </div>
+</center>
+<script src="main.js"></script>
+</body>
+</html>
